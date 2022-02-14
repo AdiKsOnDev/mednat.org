@@ -14,6 +14,7 @@ img {
     height: 300px;
 }
 
+/* Animations (Keyframes) */
 @keyframes transitionPage {
     from {
         opacity: 0;
@@ -70,6 +71,7 @@ img {
     }
 }
 
+/* Header block */
 .Header {
     display: flex;
     position: fixed;
@@ -134,7 +136,7 @@ img {
     border-right: solid 3px #FFFFFF;
 }
 
-/* Main block */
+/* Main block(-s) */
 .Main_block {
     display: flex;
     flex-direction: row-reverse;
@@ -152,6 +154,21 @@ img {
 }
 
 .Categories {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Pharmacy {
+    flex-direction: row;
+    align-items: flex-start;
+
+    background: url(Assets/pharmacy.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.Results {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -234,6 +251,7 @@ img {
     box-shadow: inset 500px 0 0 0 #D70000;
 }
 
+/* Buttons' background */
 .Img_leaves {
     position: absolute;
     z-index: -1;
@@ -307,6 +325,7 @@ img {
     z-index: 1;
 }
 
+/* SearchBar */
 #searchInput {
     width: 100%;
     height: 90%;
@@ -603,4 +622,39 @@ footer {
     font-weight: 300;
 
     color: #FFFFFF;
+}
+
+/* pharmacy.html */
+#Mednat-pharmacy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 60%;
+    width: 30%;
+
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+/* Text class and id-s */
+.pharmacy {
+    font-family: 'Calistoga', cursive;
+    font-size: 2em;
+
+    color: rgba(0, 47, 215, 0.7);
+}
+
+#label{
+    font-size: 3em;
+
+    border-bottom: 5px solid #FFFFFF;
+    padding-bottom: 30px;
+}
+
+#info {
+    color: #D70000;
+
+    border-left: 5px solid #FFFFFF;
+    padding-left: 30px;
 }
