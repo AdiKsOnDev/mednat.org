@@ -14,3 +14,11 @@ Every html\css files are located in the directory named 'Alpha'
 
 If you are not from the Group #27 in Heriot-Watt Dubai University's Web Design Course please do not try to commit\make a pull request or some other "straight" contribution, 
 kindly create an issue with an idea, bug, or any other assistance you want to provide our project with.
+
+# ♥️For the Team
+
+📋To Do:
+- pharmacy.html
+- results.html
+- Media queries 
+- Would be good to fix the issue where the auto buttons on the categories.html conflict with the manual buttons 
