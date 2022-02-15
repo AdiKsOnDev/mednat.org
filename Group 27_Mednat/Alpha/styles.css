@@ -61,6 +61,23 @@ img {
     }
 }
 
+@keyframes cardsTransition {
+    0% {
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+
+    70% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 @keyframes searchTransition {
     from {
         width: 0;
@@ -125,11 +142,11 @@ img {
     font-size: 1.75em;
 
     color: #FFFFFF;
-    transition: background-color 0.5s ease-out;
+    transition: color 0.2s ease-out;
 }
 
 .Navbar > li > a:hover {
-    background-color: rgb(0, 0, 0, 0.2);
+    color: rgba(0, 47, 215, 0.7);
 }
 
 .Navbar > li:not(:last-child) {
@@ -169,9 +186,11 @@ img {
 }
 
 .Results {
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row-reverse;
     align-items: center;
+
+    background: url(Assets/vase.jpg);
+    background-size: 100%;
 }
 
 .About_us_block {
@@ -551,7 +570,7 @@ footer {
     align-items: center;
 
     width: 100%;
-    height: 200px;
+    height: 170px;
 
     padding: 20px 0;
 
@@ -591,7 +610,7 @@ footer {
 }
 .column-info {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.1em;
 
     color: #FFFFFF;
 }
@@ -610,14 +629,19 @@ footer {
 }
 
 .contact-details {
-    font-size: 1.5rem;
+    font-size: 1.6em;
     font-family: 'Cairo', sans-serif;
+    text-align: center;
     
     color: #FFFFFF;
 }
 
+#number {
+    width: 65px;
+}
+
 #copyright-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Cairo', sans-serif;
     font-weight: 300;
 
@@ -657,4 +681,74 @@ footer {
 
     border-left: 5px solid #FFFFFF;
     padding-left: 30px;
+}
+
+/* results.html */
+#results-box {
+    height: 100%;
+
+    margin-right: 100px;
+
+    font-family: 'Calistoga', cursive;
+}
+
+#result-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 70%;
+}
+
+.result {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 120px;
+
+    animation: cardsTransition 0.5s ease forwards;
+}
+
+.card2 {
+    visibility: hidden;
+    animation-delay: 0.2s;
+}
+
+.website-name {
+    font-size: 2em;
+
+    color: #D70000;
+}
+
+.visit {
+    width: 200px;
+    height: 70px;
+
+    border: none;
+
+    font-size: 1.2em;
+    font-family: 'Calistoga', cursive;
+
+    color: #FFFFFF;
+    background-color: rgba(0, 47, 215, 0.7);
+
+    transition: width 0.2s ease-out, height 0.2s ease-out;
+}
+
+.visit:hover {
+    width: 225px;
+    height: 77.5px;
+}
+
+#results-number {
+    font-size: 2em;
+
+    border-bottom: 5px solid #FFFFFF;
+    padding-bottom: 15px;
+
+    color: rgba(0, 47, 215, 0.7);
 }
