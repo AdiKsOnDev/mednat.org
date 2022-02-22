@@ -1,0 +1,803 @@
+/* Google Phonts */
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap');
+
+* {
+    z-index: 1;
+    -webkit-text-size-adjust: auto;
+
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: auto;
+    height: 300px;
+    max-width: 100%;
+}
+
+/* Animations (Keyframes) */
+@keyframes transitionPage {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes contentTransition {
+    from {
+        transform: translateX(-60px);
+    }
+    
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes navbarTransition {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes buttonTransition {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-60px);
+    }
+}
+
+@keyframes cardsTransition {
+    0% {
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+
+    70% {
+        transform: translateY(-50px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes searchTransition {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes menuTransition {
+    0% {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Header block */
+.Header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    width: 100%;
+    height: 12%;
+    min-height: 70px;
+
+    background-color: #D70000;
+}
+
+/* Mednat.org */
+.Logo {
+    width: 20%;
+    height: 100%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Calistoga', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3em;
+    text-decoration: none;
+
+    color: #FFFFFF;
+}
+
+/* Navigation Bar */
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    animation: navbarTransition 1.5s;
+}
+
+.Navbar > li {
+    padding: 1.5% 0;
+}
+
+.Navbar > li > a {
+    padding: 10px 30px;
+
+    text-decoration: none;
+    font-family: 'Calistoga', cursive;
+    font-size: 1.75em;
+
+    color: #FFFFFF;
+    
+    transition: color 0.2s ease-out;
+}
+
+.Navbar > li > a:hover {
+    color: rgba(0, 47, 215, 0.7);
+}
+
+.Navbar > li:not(:last-child) {
+    border-right: solid 3px #FFFFFF;
+}
+
+/* Main block(-s) */
+.Main_block {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    z-index: 0;
+
+    width: 100%;
+    height: 88vh;
+
+    padding: 10% 0;
+    
+    animation: transitionPage 0.75s;
+}
+
+.Categories {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Pharmacy {
+    flex-direction: row;
+    align-items: flex-start;
+
+    background: url(Assets/pharmacy.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.Results {
+    flex-direction: row-reverse;
+    align-items: center;
+
+    background: url(Assets/vase.jpg);
+    background-size: 100%;
+}
+
+.About_us_block {
+    background: url(Assets/about_us_background2.png);
+
+    z-index: 0;
+
+    padding-bottom: 0;
+}
+
+.Browse_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background: url(Assets/browse_search.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Img_doctor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 40%;
+    height: 70%;
+}
+
+.Img2 {
+    left: 7%;
+}
+
+/* Buttons (Wax Moth, Covid 19 and etc. */
+#Buttons {
+    display: flex;
+    flex-direction: column;
+
+    width: 35%;
+    height: 85%;
+
+    animation: contentTransition 1.5s
+}
+
+#Buttons > li {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    box-shadow: inset 0 0 0 0 #D70000;
+    transition: ease-out 0.25s;
+
+    background-color: rgba(0, 47, 215, 0.7);
+
+    border-radius: 25px 0 0 25px;
+
+    visibility: hidden;
+}
+
+#Buttons > li:not(:last-child) {
+    margin-bottom: 5%;
+}
+
+#Buttons > li > a {
+    display: flex;
+    align-items: center;
+    
+    height: 100%;
+
+    text-decoration: none;
+    font-family: 'Calistoga', cursive;
+    font-size: 40px;
+    padding-left: 20px;
+
+    color: #FFFFFF; 
+}
+
+#Buttons > li:hover{
+    box-shadow: inset 600px 0 0 0 #D70000;
+}
+
+#Link-1 {
+    animation: menuTransition 1s forwards;
+    animation-delay: 0s;
+}
+
+#Link-2 {
+    animation: menuTransition 1s forwards;
+    animation-delay: 0.15s;
+}
+
+#Link-3 {
+    animation: menuTransition 1s forwards;
+    animation-delay: 0.25s;
+}
+
+#Link-4 {
+    animation: menuTransition 1s forwards;
+    animation-delay: 0.30s;
+}
+
+/* Buttons' background */
+.Img_leaves {
+    position: absolute;
+    z-index: -1;
+
+    width: 600px;
+    height: 670px;
+    bottom: 0;
+    right: 0;
+
+    object-fit: contain;
+}
+
+/* About Us Info Block */
+.Info_about_us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 25%;
+
+    border-radius: 130px 0 0 0;
+
+    font-family: 'Calistoga', cursive;
+    font-size: 1.5em;
+
+    color: #FFFFFF;
+    background-color: #D70000;
+    opacity: 80%;
+
+    animation: contentTransition 1s
+}
+
+#contact_info {
+    margin-top: 100px;
+
+    text-align: center;
+}
+
+.About_us {
+    text-align: center;
+
+    padding: 5%;
+}
+
+.About_us:not(:last-child) {
+    position: relative;
+    top: 50px;
+    padding-bottom: 50px;
+}
+
+#e-mail{
+    width: 267px;
+}
+
+#mobile_number {
+    width: 267px;
+
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+#submitButton {
+    width: 12%;
+    height: 101%;
+
+    background: url(Assets/browse_searchicon.png) center center;
+    background-size: cover;
+
+    border: none;
+
+    z-index: 1;
+}
+
+/* SearchBar */
+#searchInput {
+    width: 100%;
+    height: 90%;
+
+    border: 3px solid black;
+    border-radius: 0;
+
+    font-size: 2.5em;
+}
+
+#searchBar {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 100%;
+
+    animation: searchTransition 1.5s;
+}
+
+#searchContent {
+    width: 50%;
+    height: 10%;
+}
+
+#searchParagraph {
+    text-align: center;
+    margin-bottom: 10px;
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    color: #FFFFFF;
+    opacity: 70%;
+}
+
+/* Slideshow (Categories Slides) */
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 600px;
+    height: 400px;
+}
+
+.slides {
+    width: 600px;
+    height: 470px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 600px;
+    
+    transition: 2s;
+}
+
+/* Category Cards */
+.categoryName {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 70px;
+
+    border-radius: 0 0 15px 15px;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+
+    background-color: rgba(215, 0, 0, 0.75);
+    color: white;
+
+    transition: 0.3s;
+}
+
+.categoryName:hover{
+    background-color: #D70000;
+}
+
+.category {
+    width: 600px;
+    height: 400px;
+
+    border-radius: 15px 15px 0 0;
+}
+
+.photo_1 {
+    background: url(Assets/medical_equipment2.png) center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.photo_2 {
+    background: url(Assets/viruses.png) center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 594px;
+    height: 394px;
+
+    border: 3px solid #D70000;
+}
+
+.photo_3 {
+    background: url(Assets/stds.png) center center;
+    background-size: 100%;
+}
+
+.photo_4 {
+    background: url(Assets/pharmacy_category.png) center center;
+    background-size: 100%;
+}
+
+/* Manual Navigation for Slider */
+.manual-navigation {
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+}
+
+.manual-btn {
+    border: 2px solid #D70000;
+    padding: 5px;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+
+    margin-bottom: 5px;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #D70000;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -600px;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -1200px;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -1800px;
+}
+
+/* Automated Navigation */
+.automatic-navigation {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    width: 600px;
+    margin-top: -537.6px;
+}
+
+.automatic-navigation div:not(:last-child) {
+    margin-right: 40px;
+}
+
+.automatic-navigation div {
+    border: 1.9px solid #D70000;
+    border-radius: 10px;
+    padding: 5px;
+
+    transition: 1s;
+}
+
+#radio1:checked ~ .automatic-navigation .auto-btn1 {
+    background: #D70000;
+}
+
+#radio2:checked ~ .automatic-navigation .auto-btn2 {
+    background: #D70000;
+}
+
+#radio3:checked ~ .automatic-navigation .auto-btn3 {
+    background: #D70000;
+}
+
+#radio:checked ~ .automatic-navigation .auto-btn4 {
+    background: #D70000;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 170px;
+
+    padding: 20px 0;
+
+    background: rgb(207, 0, 0);
+}
+
+/* Page Columns */
+#footer-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 90%;
+    width: 13%;
+}
+
+.column-text {
+    font-family: 'Calistoga', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+
+    padding: 10px;
+
+    color: #FFFFFF;
+
+    text-decoration: underline;
+}
+.column-info {
+    text-align: center;
+    font-size: 1.1em;
+
+    color: #FFFFFF;
+}
+
+/* Details Block */
+#details {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+
+    margin-top: 50px;
+}
+
+.contact-details {
+    font-size: 1.6em;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+#number {
+    width: 65px;
+}
+
+#copyright-text {
+    font-size: 1.5rem;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 300;
+
+    color: #FFFFFF;
+}
+
+/* pharmacy.html */
+#Mednat-pharmacy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 60%;
+    width: 30%;
+
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+/* Text class and id-s */
+.pharmacy {
+    font-family: 'Calistoga', cursive;
+    font-size: 2em;
+
+    color: rgba(0, 47, 215, 0.7);
+}
+
+#label{
+    font-size: 3em;
+
+    border-bottom: 5px solid #FFFFFF;
+    padding-bottom: 30px;
+}
+
+#info {
+    color: #D70000;
+
+    border-left: 5px solid #FFFFFF;
+    padding-left: 30px;
+}
+
+/* results.html */
+#results-box {
+    height: 100%;
+
+    margin-right: 100px;
+
+    font-family: 'Calistoga', cursive;
+}
+
+#result-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 70%;
+}
+
+.result {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 120px;
+
+    animation: cardsTransition 0.5s ease forwards;
+}
+
+.card2 {
+    visibility: hidden;
+    animation-delay: 0.2s;
+}
+
+.website-name {
+    font-size: 2em;
+
+    color: #D70000;
+}
+
+.visit {
+    width: 200px;
+    height: 70px;
+
+    border: none;
+
+    font-size: 1em;
+    font-family: 'Calistoga', cursive;
+
+    color: #FFFFFF;
+    background-color: rgba(0, 47, 215, 0.7);
+
+    transition: width 0.2s ease-out, height 0.2s ease-out;
+}
+
+.visit:hover {
+    width: 225px;
+    height: 77.5px;
+}
+
+#results-number {
+    font-size: 2em;
+
+    border-bottom: 5px solid #FFFFFF;
+    padding-bottom: 15px;
+
+    color: rgba(0, 47, 215, 0.7);
+}
