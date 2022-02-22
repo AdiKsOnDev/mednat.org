@@ -27,6 +27,4 @@ kindly create an issue with an idea, bug, or any other assistance you want to pr
 # ♥️For the Team
 
 📋To Do:
-- results.html
 - Media queries 
-- Would be good to fix the issue where the auto buttons on the categories.html conflict with the manual buttons 
