@@ -97,14 +97,26 @@ img {
 
 @keyframes menuTransition {
     0% {
-        transform: translateX(1000px);
+        left: 100%;
+        position: relative;
+    }
+
+    100% {
+        left: 0;
+        visibility: visible;
+        position: relative;
+    }
+}
+
+@keyframes aboutUsTransition {
+    0% {
+        transform: translateY(1000px);
         opacity: 0;
     }
 
     100% {
-        transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
+        transform: translateY(0);
+        opacity: 0.8;
     }
 }
 
@@ -212,8 +224,10 @@ img {
     flex-direction: row-reverse;
     align-items: center;
 
-    background: url(Assets/vase.jpg);
+    background: url(Assets/vase_results.jpg);
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .About_us_block {
@@ -266,7 +280,7 @@ img {
     height: 100%;
 
     box-shadow: inset 0 0 0 0 #D70000;
-    transition: ease-out 0.25s;
+    transition: ease-out 0.5s;
 
     background-color: rgba(0, 47, 215, 0.7);
 
@@ -294,7 +308,7 @@ img {
 }
 
 #Buttons > li:hover{
-    box-shadow: inset 600px 0 0 0 #D70000;
+    box-shadow: inset 34rem 0 0 0 #D70000;
 }
 
 #Link-1 {
@@ -322,8 +336,8 @@ img {
     position: absolute;
     z-index: -1;
 
-    width: 600px;
-    height: 670px;
+    width: 45%;
+    height: 78%;
     bottom: 0;
     right: 0;
 
@@ -349,7 +363,7 @@ img {
     background-color: #D70000;
     opacity: 80%;
 
-    animation: contentTransition 1s
+    animation: aboutUsTransition 1.5s
 }
 
 #contact_info {
@@ -510,6 +524,7 @@ img {
     background: url(Assets/viruses.png) center center;
     background-size: 100%;
     background-repeat: no-repeat;
+
     width: 594px;
     height: 394px;
 
@@ -606,7 +621,7 @@ img {
     background: #D70000;
 }
 
-#radio:checked ~ .automatic-navigation .auto-btn4 {
+#radio4:checked ~ .automatic-navigation .auto-btn4 {
     background: #D70000;
 }
 
@@ -716,6 +731,10 @@ footer {
     font-size: 2em;
 
     color: rgba(0, 47, 215, 0.7);
+}
+
+#delivery {
+    font-size: 1.3em;
 }
 
 #label{

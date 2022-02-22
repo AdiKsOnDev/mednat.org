@@ -45,26 +45,20 @@
 
                 <li class="result card1">
                     <p class="website-name">Sample Website</p>
-                    <button class="visit" type="button" onclick ="dbReminder1()" id="demo-button-1">Visit Website</button>
+                    <button class="visit" type="button" onclick ="dbReminder()" id="demo-button-1">Visit Website</button>
                 </li>
                 
                 <li class="result card2">
                     <p class="website-name">Example-website.com</p>
-                    <button class="visit" type="button" onclick ="dbReminder2()" id="demo-button-2">Visit Website</button>
+                    <button class="visit" type="button" onclick ="dbReminder()" id="demo-button-2">Visit Website</button>
                 </li>
             </ul>
         </div>
 
         <script>
-            function dbReminder1() {
+            function dbReminder() {
 
-                document.getElementById("demo-button-1").innerHTML = "Oops, we need DataBase for this :C";
-
-            }
-
-            function dbReminder2() {
-
-                document.getElementById("demo-button-2").innerHTML = "Oops, we need a DataBase for this :C";
+                alert("Sorry, DataBase is still under construction")
 
             }
         </script>
