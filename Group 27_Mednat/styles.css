@@ -132,24 +132,30 @@ img {
     height: 12%;
     min-height: 70px;
 
-    background-color: #D70000;
+    z-index: 3;
+
+    background-color: rgb(255, 50, 50)
 }
 
 /* Mednat.org */
 .Logo {
+    min-width: 200px;
     width: 20%;
     height: 100%;
     position: relative;
 
     display: flex;
     align-items: center;
-    justify-content: center;
+
+    padding-left: 10px;
 
     font-family: 'Calistoga', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 3em;
     text-decoration: none;
+
+    z-index: 3;
 
     color: #FFFFFF;
 }
@@ -163,12 +169,12 @@ img {
     animation: navbarTransition 1.5s;
 }
 
-.Navbar > li {
-    padding: 1.5% 0;
+.Navbar > li > a.active {
+    border-bottom: 3px solid #FFFFFF;
 }
 
 .Navbar > li > a {
-    padding: 10px 30px;
+    padding: 10px 10px;
 
     text-decoration: none;
     font-family: 'Calistoga', cursive;
@@ -176,15 +182,33 @@ img {
 
     color: #FFFFFF;
     
-    transition: color 0.2s ease-out;
+    transition: border-bottom 0.1s ease-out;
 }
 
 .Navbar > li > a:hover {
-    color: rgba(0, 47, 215, 0.7);
+    border-bottom: 3px solid #FFFFFF;
 }
 
-.Navbar > li:not(:last-child) {
-    border-right: solid 3px #FFFFFF;
+/* Navbar slider */
+.hamburger {
+    display: none;
+    position: relative;
+
+    width: 60px;
+    height: 70px;
+
+    cursor: pointer;
+
+    z-index: 3;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.mobile-navbar {
+    display: none;
 }
 
 /* Main block(-s) */
@@ -213,19 +237,17 @@ img {
 
 .Pharmacy {
     flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
 
-    background: url(Assets/pharmacy.png);
-    background-size: 100%;
+    background: url(Assets/pharmacy.png) center center;
+    background-size: fill;
     background-repeat: no-repeat;
 }
 
 .Results {
-    flex-direction: row-reverse;
-    align-items: center;
-
-    background: url(Assets/vase_results.jpg);
-    background-size: 100%;
+    background: url(Assets/vase_results1.jpg) center center;
+    background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -247,6 +269,7 @@ img {
     background: url(Assets/browse_search.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .Img_doctor {
@@ -254,8 +277,8 @@ img {
     bottom: 0;
     left: 0;
 
-    width: 40%;
-    height: 70%;
+    width: 600px;
+    height: 600px;
 }
 
 .Img2 {
@@ -267,6 +290,8 @@ img {
     display: flex;
     flex-direction: column;
 
+    min-width: 320px;
+    min-height: 250px;
     width: 35%;
     height: 85%;
 
@@ -301,14 +326,14 @@ img {
 
     text-decoration: none;
     font-family: 'Calistoga', cursive;
-    font-size: 40px;
-    padding-left: 20px;
+    font-size: 2.2em;
+    padding: 0 5%;
 
     color: #FFFFFF; 
 }
 
 #Buttons > li:hover{
-    box-shadow: inset 34rem 0 0 0 #D70000;
+    box-shadow: inset 34rem 0 0 0 rgb(255, 50, 50);
 }
 
 #Link-1 {
@@ -336,12 +361,11 @@ img {
     position: absolute;
     z-index: -1;
 
-    width: 45%;
-    height: 78%;
+    width: 700px;
+    height: 800px;
+
     bottom: 0;
     right: 0;
-
-    object-fit: contain;
 }
 
 /* About Us Info Block */
@@ -351,6 +375,7 @@ img {
     justify-content: center;
     align-items: center;
 
+    min-width: 300px;
     height: 100%;
     width: 25%;
 
@@ -360,14 +385,14 @@ img {
     font-size: 1.5em;
 
     color: #FFFFFF;
-    background-color: #D70000;
+    background-color: rgb(255, 27, 27);
     opacity: 80%;
 
     animation: aboutUsTransition 1.5s
 }
 
 #contact_info {
-    margin-top: 100px;
+    margin-top: 20%;
 
     text-align: center;
 }
@@ -380,8 +405,8 @@ img {
 
 .About_us:not(:last-child) {
     position: relative;
-    top: 50px;
-    padding-bottom: 50px;
+    top: 5%;
+    padding-bottom: 5%;
 }
 
 #e-mail{
@@ -391,13 +416,13 @@ img {
 #mobile_number {
     width: 267px;
 
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: 20%;
+    margin-bottom: 10%;
 }
 
 #submitButton {
-    width: 12%;
-    height: 101%;
+    width: 60.5px;
+    height: 60.5px;
 
     background: url(Assets/browse_searchicon.png) center center;
     background-size: cover;
@@ -405,6 +430,10 @@ img {
     border: none;
 
     z-index: 1;
+}
+
+#searchLogo {
+    display: none;
 }
 
 /* SearchBar */
@@ -435,7 +464,7 @@ img {
 
 #searchParagraph {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 5%;
 
     font-size: 2rem;
     font-weight: bold;
@@ -448,15 +477,14 @@ img {
 .slider {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 
-    width: 600px;
-    height: 400px;
+    width: 767px;
+    height: 464px;
 }
 
 .slides {
-    width: 600px;
-    height: 470px;
+    width: 78.1%;
     
     display: flex;
     flex-direction: row;
@@ -474,8 +502,6 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    width: 600px;
     
     transition: 2s;
 }
@@ -488,16 +514,16 @@ img {
     align-items: center;
 
     width: 100%;
-    height: 70px;
+    height: 2em;
 
     border-radius: 0 0 15px 15px;
 
     text-align: center;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: bold;
 
-    background-color: rgba(215, 0, 0, 0.75);
+    background-color: rgb(255, 50, 50);
     color: white;
 
     transition: 0.3s;
@@ -543,12 +569,14 @@ img {
 
 /* Manual Navigation for Slider */
 .manual-navigation {
+    position: absolute;
     display: flex;
     justify-content: center;
 
-    position: absolute;
-    width: 800px;
-    margin-top: -40px;
+    width: 607px;
+    height: 1%;
+
+    margin-top: -537.6px;
 }
 
 .manual-btn {
@@ -593,7 +621,8 @@ img {
     display: flex;
     justify-content: center;
 
-    width: 600px;
+    width: 607px;
+    height: 1%;
     margin-top: -537.6px;
 }
 
@@ -634,11 +663,11 @@ footer {
     align-items: center;
 
     width: 100%;
-    height: 170px;
+    height: 100%;
 
     padding: 20px 0;
 
-    background: rgb(207, 0, 0);
+    background: rgb(255, 50, 50);
 }
 
 /* Page Columns */
@@ -657,8 +686,8 @@ footer {
     justify-content: space-between;
     align-items: center;
 
-    height: 90%;
-    width: 13%;
+    height: 100px;
+    width: 150px;
 }
 
 .column-text {
@@ -718,11 +747,13 @@ footer {
     flex-direction: column;
     justify-content: space-between;
 
+    min-width: 345px;
+    min-height: 500px;
     height: 60%;
     width: 30%;
 
-    margin-top: 100px;
-    margin-left: 100px;
+    margin-top: 10%;
+    margin-left: 10%;
 }
 
 /* Text class and id-s */
@@ -749,6 +780,7 @@ footer {
 
     border-left: 5px solid #FFFFFF;
     padding-left: 30px;
+    margin-top: 30px;
 }
 
 /* results.html */
@@ -819,4 +851,535 @@ footer {
     padding-bottom: 15px;
 
     color: rgba(0, 47, 215, 0.7);
+}
+
+@media screen and (max-width: 1200px) {
+    #Buttons > li > a {
+        font-size: 2em;
+    }
+
+    footer > #footer-navbar > .column > .column-text {
+        font-size: 1.2em;
+    }
+
+    #Mednat-pharmacy {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .Main_block {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Pharmacy {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .Results {
+        flex-direction: row-reverse;
+    }
+
+    .visit {
+        transition: background-color 0.2s ease-out;
+    }
+
+    .visit:hover {
+        background-color: rgb(26, 71, 236);
+        width: 200px;
+        height: 70px;
+    }
+
+    #results-box {
+        margin: 0;
+    }
+
+    .Navbar {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger .bar, .hamburger::after, .hamburger::before {
+        display: block;
+        
+        width: 100%;
+        height: 5px;
+        
+        content: '';
+    
+        margin: 6px 0;
+    
+        transition: 0.4s;
+
+        z-index: 3;
+    
+        background-color: #FFFFFF;
+    }
+
+    .hamburger.is-active::before {
+        transform: rotate(-45deg) translate(-8px, 6px);
+
+        background-color: rgb(255, 50, 50);
+    }
+
+    .hamburger.is-active::after {
+        transform: rotate(45deg) translate(-8px, -8px);
+
+        background-color: rgb(255, 50, 50);
+    }
+
+    .hamburger.is-active > .bar {
+        opacity: 0;
+
+        background-color: rgb(255, 50, 50);
+    }
+
+    .Logo.is-active {
+        color: rgb(255, 50, 50);
+    }
+
+    .mobile-navbar {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 100%;
+    
+        width: 100%;
+        min-height: 100vh;
+    
+        padding-top: 20%;
+    
+        z-index: 2;
+    
+        background-color: #FFFFFF;
+
+        transition: left 0.3s ease-out;
+    }
+
+    .mobile-navbar.is-active {
+        left: 0;
+    }
+
+    .mobile-navbar > a {
+        display: block;
+        text-align: center;
+
+        width: 40%;
+        min-width: 310px;
+
+        margin: auto;
+        margin-bottom: 16px;
+        padding: 20px 16px;
+
+        font-size: 2em;
+        font-family: 'Calistoga', cursive;
+
+        color: #FFFF;
+        background-color: rgb(57, 95, 233);
+
+        transition: background-color 0.2s ease-out; 
+    }
+
+    .mobile-navbar > a:hover {
+        background-color: rgb(0, 61, 230);
+    }
+
+    #Buttons {
+        width: 70%;
+    }
+
+    #Buttons > li {
+        border-radius: 0;
+
+        background-color: rgb(57, 95, 233);
+
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    #Buttons > li:hover {
+        background-color: rgb(255, 50, 50);
+        box-shadow: inset 0 0 0 0;
+
+    }
+
+    #Buttons > li > a {
+        justify-content: center;
+
+        font-size: 2.5em;
+    }
+
+    .Img_doctor {
+        display: none;
+    }
+
+    .Info_about_us{
+        border-radius: 0;
+
+        width: 100%;
+        height: 100vh;
+
+        font-size: 2em;
+
+        background: none;
+        color: rgb(36, 78, 231);
+
+        animation: none;
+    }
+
+    #contact_info {
+        margin-top: 10%;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+
+    footer > #details > h1{
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #results-box {
+        margin-top: 100px;
+    }
+
+    .slider {
+        width: 576px;
+        height: 300px;
+    }
+
+    .category {
+        width: 450px;
+        height: 300px;
+    }
+
+    .photo_2 {
+        width: 444px;
+        height: 291px;
+    }
+    
+    .manual-navigation {
+        width: 460.5px;
+
+        margin-top: -400px;
+    }
+
+    .automatic-navigation {
+        width: 460.5px;
+
+        margin-top: -400px;
+    }
+
+    #radio1:checked ~ .first {
+        margin-left: 0;
+    }
+    
+    #radio2:checked ~ .first {
+        margin-left: -450px;
+    }
+    
+    #radio3:checked ~ .first {
+        margin-left: -900px;
+    }
+    
+    #radio4:checked ~ .first {
+        margin-left: -1350px;
+    }
+
+    .categoryName {
+        font-size: 1.3em;
+    }
+
+    #Buttons { 
+        margin-top: 40px;
+    }
+
+    #Buttons > li > a {
+        font-size: 2.2em;
+    }
+
+    #searchBar {
+        font-size: 0.7em;
+    }
+
+    #searchParagraph {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #Buttons {
+        height: 400px;
+    }
+
+    #Buttons > li > a {
+        font-size: 2em;
+    }
+
+    .Logo {
+        font-size: 2.5em;
+    }
+
+    .slider {
+        width: 384px;
+        height: 200px;
+    }
+    
+    .category {
+        width: 300px;
+        height: 200px;
+    }
+
+    .photo_2 {
+        width: 294px;
+        height: 194px;
+    }
+    
+    .manual-btn {
+        padding: 3px;
+    }
+
+    .automatic-navigation > div {
+        padding: 3px;
+    }
+    
+    .manual-navigation {
+        width: 307px;
+
+        margin-top: -337px;
+    }
+
+    .automatic-navigation {
+        width: 307px;
+
+        margin-top: -337px;
+    }
+
+    #radio1:checked ~ .first {
+        margin-left: 0;
+    }
+    
+    #radio2:checked ~ .first {
+        margin-left: -300px;
+    }
+    
+    #radio3:checked ~ .first {
+        margin-left: -600px;
+    }
+    
+    #radio4:checked ~ .first {
+        margin-left: -900px;
+    }
+
+    .categoryName {
+        font-size: 1.3em;
+    }
+
+    footer > #footer-navbar > .column {
+        width: 100px;
+    }
+
+    footer > #details > h1 {
+        font-size: 1em;
+    }
+
+    #Buttons { 
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        font-size: 0.8em;
+    }
+
+    .column {
+        max-width: fit-content;
+        height: fit-content;
+    }
+
+    .column-info {
+        display: none;
+    }
+
+    .column-text {
+        padding: 0;
+    }
+
+    #details {
+        margin-top: 25px;
+    }
+
+    #Mednat-pharmacy {
+        font-size: 0.8em;
+
+        min-width: 245px;
+    }
+
+    #results-box {
+        font-size: 0.8em;
+    }
+
+    .visit {
+        width: 170px;
+        height: 70px;
+    }
+
+    .visit:hover {
+        width: 170px;
+    }
+
+    #searchLogo {
+        display: block;
+        position: relative;
+
+        bottom: 25px;
+
+        font-size: 200%;
+        font-family: 'Calistoga', cursive;
+
+        color: #000000;
+    }
+
+    .Browse_block {
+        background: none;
+        background: url(Assets/plant_home.png) center center;
+        background-size: 220%;
+    }
+
+    #searchParagraph > p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #Buttons {
+        min-width: 200px;
+        height: 350px;
+
+        font-size: 0.7em;
+    }
+
+    .Logo {
+        font-size: 2em;
+    }
+
+    .Info_about_us {
+        font-size: 1.7em;
+    }
+
+    #results-number {
+        font-size: 1.5em;
+    }
+
+    .slider {
+        width: 256px;
+        height: 133.3px;
+    }
+
+    #results-box {
+        margin-top: 100px;
+    }
+
+    .category {
+        width: 200px;
+        height: 133.3px;
+    }
+
+    .photo_2 {
+        width: 193px;
+        height: 129.3px;
+    }
+
+    .photo_3 {
+        width: 201px;
+    }
+    
+    .mobile-navbar > a {
+        min-width: 200px;
+
+        font-size: 1.5em;
+    }
+
+    .manual-btn:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .automatic-navigation > div:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .manual-navigation {
+        width: 204.6px;
+
+        margin-top: -260px;
+    }
+
+    .automatic-navigation {
+        width: 204.6px;
+
+        margin-top: -260px;
+    }
+
+    #radio1:checked ~ .first {
+        margin-left: 0;
+    }
+    
+    #radio2:checked ~ .first {
+        margin-left: -200px;
+    }
+    
+    #radio3:checked ~ .first {
+        margin-left: -400px;
+    }
+    
+    #radio4:checked ~ .first {
+        margin-left: -600px;
+    }
+
+    #searchBar {
+        font-size: 0.4em;
+    }
+
+    #Mednat-pharmacy {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    footer {
+        font-size: 0.7em;
+    }
+
+    #details {
+        font-size: 0.8em;
+    }
+
+    #Buttons > li > a {
+        font-size: 1.6em;
+    }
+
+    .Info_about_us {
+        font-size: 1.4em;
+    }
+
+    .website-name {
+        font-size: 1.5em;
+    }
+
+    #results-number {
+        font-size: 1.2em;
+    }
+
+    #searchLogo {
+        font-size: 150%;
+    }
 }

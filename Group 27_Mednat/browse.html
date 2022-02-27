@@ -17,12 +17,12 @@
 
         <!-- Navigation Bar -->
         <nav>
-            <ul class = "Navbar">
+            <ul class="Navbar">
                 <li>
                     <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="browse.html">Browse</a>
+                    <a href="browse.html" class="active ">Browse</a>
                 </li>
                 <li>
                     <a href="about_us.html">About Us</a>
@@ -32,11 +32,26 @@
                 </li>
             </ul>
         </nav>
+        
+        <button class="hamburger">
+            <div class="bar"></div>
+        </button>
+
+        <nav class="mobile-navbar">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse</a>
+            <a href="about_us.html">About Us</a>
+            <a href="categories.html">Categories</a>
+        </nav>
     </div>
 
     <div class="Browse_block Main_block">
         <div id="searchContent">
             <div id="searchParagraph">
+                <h1 id="searchLogo">
+                    Search
+                </h1>
+
                 <p>
                     Lookup specific queries in the box below 
                 </p>
@@ -98,5 +113,7 @@
             </h1>
         </div>
     </footer>
+
+    <script src="Scripts/navbar-slider.js"></script>
 </body>
 </html>

@@ -17,9 +17,9 @@
 
         <!-- Navigation Bar -->
         <nav>
-            <ul class = "Navbar">
+            <ul class="Navbar">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html" class="active">Home</a>
                 </li>
                 <li>
                     <a href="browse.html">Browse</a>
@@ -32,6 +32,18 @@
                 </li>
             </ul>
         </nav>
+        
+        <button class="hamburger">
+            <div class="bar"></div>
+        </button>
+
+        <nav class="mobile-navbar">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse</a>
+            <a href="about_us.html">About Us</a>
+            <a href="categories.html">Categories</a>
+        </nav>
+        
     </div>
 
     <!-- Main Block -->
@@ -86,7 +98,7 @@
                 </a>
 
                 <p class="column-info">
-                    Categories you can find on our website.
+                    Categories that you can find on our website.
                 </p>
             </div>
         </div>
@@ -105,5 +117,7 @@
             </h1>
         </div>
     </footer>
+
+    <script src="Scripts/navbar-slider.js"></script>
 </body>
 </html>

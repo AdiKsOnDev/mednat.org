@@ -16,7 +16,7 @@
 
         <!-- Navigation Bar -->
         <nav>
-            <ul class = "Navbar">
+            <ul class="Navbar">
                 <li>
                     <a href="index.html">Home</a>
                 </li>
@@ -24,12 +24,23 @@
                     <a href="browse.html">Browse</a>
                 </li>
                 <li>
-                    <a href="about_us.html">About Us</a>
+                    <a href="about_us.html" class="active">About Us</a>
                 </li>
                 <li>
                     <a href="categories.html">Categories</a>
                 </li>
             </ul>
+        </nav>
+
+        <button class="hamburger">
+            <div class="bar"></div>
+        </button>
+
+        <nav class="mobile-navbar">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse</a>
+            <a href="about_us.html">About Us</a>
+            <a href="categories.html">Categories</a>
         </nav>
     </div>
 
@@ -107,5 +118,7 @@
             </h1>
         </div>
     </footer>
+
+    <script src="Scripts/navbar-slider.js"></script>
 </body>
 </html>
