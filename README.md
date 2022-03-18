@@ -27,4 +27,3 @@ kindly create an issue with an idea, bug, or any other assistance you want to pr
 # ♥️For the Team
 
 📋To Do:
-- Media queries 
